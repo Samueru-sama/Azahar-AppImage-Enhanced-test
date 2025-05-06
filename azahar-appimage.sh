@@ -66,6 +66,7 @@ echo "$VERSION" > ~/version
 		-DCITRA_USE_PRECOMPILED_HEADERS=OFF \
 		-DCMAKE_C_FLAGS="$ARCH_FLAGS" \
 		-DCMAKE_CXX_FLAGS="$ARCH_FLAGS" \
+		-DCMAKE_VERBOSE_MAKEFILE=ON \
 		-Wno-dev
 	cmake --build . -- -j"$(nproc)"
 	sudo make install
